@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - Site Blocker Dinâmico</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px auto;
+      max-width: 800px;
+      line-height: 1.6;
+      color: #333;
+      padding: 0 20px;
+    }
+    h1 {
+      color: #222;
+    }
+    select {
+      margin-top: 20px;
+      padding: 5px 10px;
+      font-size: 14px;
+    }
+    .lang-section {
+      display: none;
+    }
+    .lang-section.active {
+      display: block;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy / Política de Privacidade</h1>
+
+  <label for="lang">Language / Idioma:</label>
+  <select id="lang">
+    <option value="en">English</option>
+    <option value="pt">Português (Brasil)</option>
+  </select>
+
+  <!-- ENGLISH VERSION -->
+  <div id="en" class="lang-section active">
+    <h2>Privacy Policy</h2>
+    <p>
+      The <strong>Site Blocker Dinâmico</strong> Chrome extension does not collect, store, or share any personal information from users.
+    </p>
+    <p>
+      All configuration data — such as the list of blocked websites and schedules — is stored locally on the user's browser using the <code>chrome.storage</code> API.
+    </p>
+    <p>
+      No information is transmitted to external servers, and no third parties have access to user data.
+    </p>
+    <p>
+      This extension operates entirely on the user's device and is designed for privacy and productivity.
+    </p>
+    <p>
+      For any questions or concerns, contact: <strong>seuemail@dominio.com</strong>
+    </p>
+  </div>
+
+  <!-- PORTUGUESE VERSION -->
+  <div id="pt" class="lang-section">
+    <h2>Política de Privacidade</h2>
+    <p>
+      A extensão <strong>Site Blocker Dinâmico</strong> para o Google Chrome não coleta, armazena ou compartilha nenhuma informação pessoal dos usuários.
+    </p>
+    <p>
+      Todas as configurações — como a lista de sites bloqueados e os horários definidos — são salvas localmente no navegador do usuário através da API <code>chrome.storage</code>.
+    </p>
+    <p>
+      Nenhuma informação é transmitida para servidores externos, e nenhum dado é compartilhado com terceiros.
+    </p>
+    <p>
+      Esta extensão funciona inteiramente no dispositivo do usuário, priorizando privacidade e produtividade.
+    </p>
+    <p>
+      Em caso de dúvidas ou solicitações, entre em contato: <strong>seuemail@dominio.com</strong>
+    </p>
+  </div>
+
+  <footer>
+    <p>© 2025 Site Blocker Dinâmico</p>
+  </footer>
+
+  <script>
+    const select = document.getElementById('lang');
+    const sections = document.querySelectorAll('.lang-section');
+
+    select.addEventListener('change', (e) => {
+      const lang = e.target.value;
+      sections.forEach(section => {
+        section.classList.toggle('active', section.id === lang);
+      });
+    });
+  </script>
+</body>
+</html>
